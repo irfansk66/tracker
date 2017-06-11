@@ -17,7 +17,7 @@ import com.pup.entity.Vehicle;
 import com.pup.service.VehicleService;
 
 @RestController
-@CrossOrigin(origins = "http://mocker.egen.io", maxAge = 3600)
+@CrossOrigin(origins = "*", maxAge = 3600)
 public class VehicleController {
 	
 	@Autowired
@@ -31,6 +31,18 @@ public class VehicleController {
 		return service.findOne(vinId);
 		
 	} 	
+	
+	
+	@RequestMapping(method=RequestMethod.GET, value="/vehicles",
+			produces=org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public List<Vehicle> findAll()
+	{
+		
+		return service.findAll();
+		
+	} 
+	
+	
 	
 	
 

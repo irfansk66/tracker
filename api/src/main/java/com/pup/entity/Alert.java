@@ -6,8 +6,14 @@ import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 @Entity
+@NamedQueries({
+	
+	@NamedQuery(name = "Alert.findAllVehicleAlerts", query= "SELECT alrt FROM Alert alrt WHERE alrt.vin=:avin")
+})
 public class Alert {
 	
 	

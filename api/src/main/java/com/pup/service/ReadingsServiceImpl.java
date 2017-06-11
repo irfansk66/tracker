@@ -1,10 +1,7 @@
 package com.pup.service;
 
-import java.sql.Timestamp;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.util.Calendar;
+
+import java.util.List;
 
 import javax.transaction.Transactional;
 
@@ -99,6 +96,18 @@ public class ReadingsServiceImpl implements ReadingsService {
 		}
 				
 		
+	}
+
+	@Override
+	public List<Readings> geolocations(String VinId) {
+		// TODO Auto-generated method stub
+		return Rrepo.geolocations(VinId);
+	}
+
+	@Override
+	public List<Readings> getPlotSignalReadings(String VinId, float range) {
+		// TODO Auto-generated method stub
+		return Rrepo.getPlotSignalReadings(VinId, range);
 	}
 
 }

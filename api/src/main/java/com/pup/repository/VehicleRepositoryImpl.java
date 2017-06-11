@@ -1,7 +1,10 @@
 package com.pup.repository;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
 
@@ -42,6 +45,15 @@ public class VehicleRepositoryImpl implements VehicleRepository {
 		// TODO Auto-generated method stub
 		em.merge(car);
 		System.out.println("updatemethod rep update success!!");
+	}
+
+
+	@Override
+	public List<Vehicle> findAll() {
+		// TODO Auto-generated method stub
+		
+		TypedQuery<Vehicle> query =em.createNamedQuery("Vehicle.findAll", Vehicle.class);
+		return query.getResultList();
 	}
 
 }

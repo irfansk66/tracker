@@ -4,9 +4,17 @@ import java.sql.Timestamp;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 
 @Entity
+@NamedQueries({
+	
+	@NamedQuery(name="Vehicle.findAll",
+				query="SELECT veh FROM Vehicle veh")
+	
+})
 public class Vehicle {
 	
 	@Id

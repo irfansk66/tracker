@@ -67,4 +67,10 @@ public class VehicleServiceImpl implements VehicleService {
 
 	}
 
+	@Override
+	public List<Vehicle> findAll() {
+		// TODO Auto-generated method stub
+		return vrepo.findAll();
+	}
+
 }
