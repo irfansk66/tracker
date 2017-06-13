@@ -1,0 +1,23 @@
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>VIN</th>
+        <th ng-click="vehicleListVm.sorter.sortBy='model'; vehicleListVm.sorter.sortOrder=!vehicleListVm.sorter.sortOrder;">Model</th>
+        <th> Make</th>
+        <th ng-click="vehicleListVm.sorter.sortBy='year'; vehicleListVm.sorter.sortOrder=!vehicleListVm.sorter.sortOrder;">Year</th>
+        <th ng-click="vehicleListVm.sorter.sortBy='lastServiceDate'; vehicleListVm.sorter.sortOrder=!vehicleListVm.sorter.sortOrder;">Last Service Date</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr ng-repeat="car in vehicleListVm.vehicles | orderBy:vehicleListVm.sorter.sortBy:vehicleListVm.sorter.sortOrder "
+        ng-class="{2015:'latest'}[car.year]">
+        <td><a href="#!/vehicles/{{car.vin}}">{{car.vin}}</a></td>
+        <td>{{car.model}}</td>
+        <td>{{car.make}}</td>
+        <td>{{car.year}}</td>
+        <td>{{car.lastServiceDate |date:'medium'}}</td>
+    </tr>
+    </tbody>
+</table>

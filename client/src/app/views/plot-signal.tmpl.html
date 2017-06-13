@@ -1,0 +1,27 @@
+<h1>Plot Signals</h1>
+
+<div ng-controller="plotSignalController as plotSignalVm" id="resizable">
+    <form ng-submit="onFormSubmit(vin,tx)" name ="plotSignalForm" novalidate>
+        <div class="form-group">
+            <label for="vin">Enter VIN Number</label>
+            <input type="text"
+                   class="form-control"
+                   name="vin"
+                   ng-model="vin"
+                   id="vin" placeholder="VIN">
+        </div>
+        <div class="form-group">
+            <label for="tx">Enter Time in Minutes</label>
+            <input type="text"
+                   class="form-control"
+                   name="tx"
+                   ng-model="tx"
+                   id="tx" placeholder="Time in Minutes">
+        </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    <hr>
+    <div zingchart id="chart-1" zc-json="myJson" zc-width="100%" zc-height="100%"></div>
+    <!--<div>{{plotSignalVm.readings | json}}</div>-->
+</div>

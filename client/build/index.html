@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+<head>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <!-- endinject -->
+    <!-- vendor:css -->
+    <!-- endinject -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- endinject -->
+    <!-- app:css -->
+    <!-- endinject -->
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Car Tracker</h1>
+    </header>
+
+
+
+    <ul class="nav nav-pills">
+        <li ><a href="#!/vehicles">Cars List</a></li>
+        <li ><a href="#!/High-Alerts">High Alerts</a></li>
+        <li ><a href="#!/Plot-Signals">Plot Signals</a></li>
+        <li ><a href="#!/Geolocation">Geolocation</a></li>
+        <li ><a href="#!/Historical-Alerts">Historical Alerts</a></li>
+    </ul>
+    <div ng-view></div>
+
+    <footer>A product of Puppy Enterprise</footer>
+
+</div>
+
+<!-- bower:js -->
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-route/angular-route.js"></script>
+<script src="/bower_components/angular-messages/angular-messages.js"></script>
+<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="/bower_components/zingchart/client/zingchart.min.js"></script>
+<script src="/bower_components/ZingChart-AngularJS/src/zingchart-angularjs.js"></script>
+<!-- endinject -->
+<!-- vendor:js -->
+<!-- endinject -->
+
+<!-- inject:js -->
+<script src="app/app.module.js"></script>
+<script src="app/controller/vehicle-list.controller.js"></script>
+<script src="app/controller/vehicle-detail.controller.js"></script>
+<script src="app/controller/plot-signal.controller.js"></script>
+<script src="app/controller/Historical-Alerts.controller.js"></script>
+<script src="app/controller/High-Alerts.controller.js"></script>
+<script src="app/controller/geolocation.controller.js"></script>
+<script src="app/services/vehicle.service.js"></script>
+<script src="app/app.constant.js"></script>
+<!-- endinject -->
+<!-- app:js -->
+<!-- endinject -->
+<script  src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+</body>
+</html>
+
+
+
+
+

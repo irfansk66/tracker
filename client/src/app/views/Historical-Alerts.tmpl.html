@@ -1,0 +1,34 @@
+<h1>Historical Alerts</h1>
+<div ng-controller="HistoricalAlertsController as historicalAlertsVm">
+    <form ng-submit="onFormSubmit(vin)" name ="historicslAlertsForm" novalidate>
+        <div class="form-group">
+            <label for="vin">Enter VIN Number</label>
+            <input type="text"
+                   class="form-control"
+                   name="vin"
+                   ng-model="vin"
+                   id="vin" placeholder="VIN">
+        </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    <hr>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>VIN</th>
+            <th >PRIORITY</th>
+            <th> MESSAGE</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr ng-repeat="car in historicalAlertsVm.alerts">
+            <td>{{car.vin}}</td>
+            <td>{{car.priority}}</td>
+            <td>{{car.message}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

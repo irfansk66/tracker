@@ -1,0 +1,19 @@
+<h1>High Alerts Within Last Two Hours</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>VIN</th>
+        <th >PRIORITY</th>
+        <th ng-click="highAlertsVm.sorter.sortBy=highAlertsVm.alerts[2]; highAlertsVm.sorter.sortOrder=!highAlertsVm.sorter.sortOrder;"> NUMBER of High Alerts</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr ng-repeat="car in highAlertsVm.alerts">
+        <td>{{car[0]}}</td>
+        <td>{{car[1]}}</td>
+        <td>{{car[2]}}</td>
+    </tr>
+    </tbody>
+</table>

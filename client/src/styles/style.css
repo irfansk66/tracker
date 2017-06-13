@@ -1,0 +1,45 @@
+/* Styles go here */
+
+
+
+img{
+
+    display:block;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    margin:0 auto;
+    border: 1px solid black;
+}
+
+/* Styles go here */
+
+.latest{
+
+    background:blue;
+    color:white;
+}
+
+#gmaps {
+    width: 450px;
+    height: 450px;
+}
+
+#resizable {
+    height: 400px;
+    width: 500px;
+    padding: 5px;
+    border: 2px dashed #AAA;
+}
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
